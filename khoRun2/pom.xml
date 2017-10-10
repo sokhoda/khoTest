@@ -14,11 +14,6 @@
     <version>0.0.4</version>
 
 <dependencies>
-    <dependency>
-        <groupId>ua.kho</groupId>
-        <artifactId>khoRun</artifactId>
-        <version>0.0.1</version>
-    </dependency>
 </dependencies>
 
 </project>

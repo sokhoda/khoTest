@@ -21,7 +21,7 @@ public class Test {
     }
     public static void main(String[] args) {
         System.out.println(method());
-
+        System.out.println("n=" + (int)'\n');
         String a1 = "Hello";
         String a2 = "Hel";
         String s3 = a2 + "lo";
@@ -29,7 +29,7 @@ public class Test {
         System.out.println(a1 ==  s3);
         System.out.println(a1 == a3);
 
-        a2 = "fe";
+        a2 = null;
         int size = Optional.ofNullable(a2.length()).orElse(0);
 
         final Street street = getStreet(getHouse(HouseType.PRIVATE, 99));
@@ -54,12 +54,12 @@ public class Test {
 //                .collect(Collectors.toList())
 //        );
 
-//        System.out.println(
-//                CollectionUtils.emptyIfNull(students).stream()
-//                        .map(Student::getAddress)
-//                        .filter(address1 -> address1.hashCode() > 100)
-//                        .findFirst().orElse(getAddress(getStreet(getHouse(HouseType.BRICK,01002))))
-//        );
+        System.out.println(
+                CollectionUtils.emptyIfNull(students).stream()
+                        .findFirst()
+                        .map(Student::getAddress)
+                        .orElse(getAddress(getStreet(getHouse(HouseType.BRICK,01002))))
+        );
 
 
 //        Optional<Address> length2 = Optional.ofNullable(students)
